@@ -129,7 +129,6 @@ def plotcircle():
         theta_joint = sym.Matrix([0,75,-60,60,45,0])*(pi/180)
         N = 10
 	th = linspace(float(1), float(10),num=N)
-
         T1 = []
         T2 = []
         T3 = []
