@@ -127,8 +127,8 @@ def plotcircle():
 
         # Inverse Kinematics
         theta_joint = sym.Matrix([0,75,-60,60,45,0])*(pi/180)
-        N = 60
-        th = linspace(float(pi/2), float((5*pi)/2),num=N)
+        N = 10
+	th = linspace(float(1), float(10),num=N)
 
         T1 = []
         T2 = []
@@ -147,8 +147,8 @@ def plotcircle():
         for i in range(0,N):
             twist = Float64MultiArray()
 
-            x_dot = -100.0 * (2*pi/5)* sin(th[i])  
-            z_dot = 100.0 * (2*pi/5)* cos(th[i])
+            x_dot = 2 * th[i] - 5
+    	    z_dot = 0
 
             V = Matrix([x_dot,0.0, z_dot, 0.0, 0.0, 0.0])
 
