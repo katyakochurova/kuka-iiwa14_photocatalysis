@@ -134,17 +134,17 @@ def plotcircle():
     while not rospy.is_shutdown():
 
         # Inverse Kinematics
-        theta_joint = sym.Matrix([0,75,-60,60,45,0])*(pi/180)
+        theta_joint = sym.Matrix([0,75,-45,-60,60,45,0])*(pi/180)
         N = 10
         th = linspace(float(1), float(10),num=N)
-        T1 = []
-        T2 = []
-        T3 = []
-        T4 = []
-        T5 = []
-        T6 = []
-        cirx = []
-        ciry = []
+        # T1 = []
+        # T2 = []
+        # T3 = []
+        # T4 = []
+        # T5 = []
+        # T6 = []
+        # cirx = []
+        # ciry = []
 
         # old_min = -0.88
         # old_max = 2.00
