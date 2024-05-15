@@ -44,7 +44,7 @@ def plotcircle():
     #Initializing Node
     rospy.init_node('publish_node', anonymous=True) # defining the ros node - publish node
     turning = rospy.Publisher('turn', Float64MultiArray, queue_size=10) 
-    rate = rospy.Rate(1) # 1hz # fequency at which the publishing occurs
+    rate = rospy.Rate(10) # 10hz # fequency at which the publishing occurs
     rospy.loginfo("Analysing the Robot!!!")  # to print on the terminal
 
     # Obtaining Transformation Matrices
@@ -133,7 +133,7 @@ def plotcircle():
     while not rospy.is_shutdown():
 
         # Inverse Kinematics
-        theta_joint = sym.Matrix([0,45,45,-45,45,45,0])*(pi/180)
+        theta_joint = sym.Matrix([0,90,90,-90,-90,90,0])*(pi/180)
         N = 20
         th = linspace(float(1), float(10),num=N)
         # T1 = []
