@@ -135,7 +135,7 @@ def plotcircle():
         # Inverse Kinematics
         theta_joint = sym.Matrix([0,90,90,-90,-90,90,0])*(pi/180)
         N = 40
-        th = linspace(float(1), float(200),num=N)
+        th = linspace(float(1), float(80),num=N)
         # T1 = []
         # T2 = []
         # T3 = []
