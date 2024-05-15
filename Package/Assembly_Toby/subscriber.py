@@ -13,8 +13,8 @@ pub1_left = rospy.Publisher('Assembly_Toby/joint_1_controller/command', Float64,
 pub2_right = rospy.Publisher('Assembly_Toby/joint_2_controller/command', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
 pub2_left = rospy.Publisher('Assembly_Toby/joint_2_controller/command', Float64, queue_size=10)
 
-# pub3_right = rospy.Publisher('Assembly_Toby/joint_3_controller/command', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
-# pub3_left = rospy.Publisher('Assembly_Toby/joint_3_controller/command', Float64, queue_size=10)
+pub3_right = rospy.Publisher('Assembly_Toby/joint_3_controller/command', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
+pub3_left = rospy.Publisher('Assembly_Toby/joint_3_controller/command', Float64, queue_size=10)
 
 pub4_right = rospy.Publisher('Assembly_Toby/joint_4_controller/command', Float64, queue_size=10) # Add your topic here between ''. Eg '/my_robot/steering_controller/command'
 pub4_left = rospy.Publisher('Assembly_Toby/joint_4_controller/command', Float64, queue_size=10)
@@ -43,9 +43,9 @@ def turn_push(data):
     pub2_right.publish(twist)
     pub2_left.publish(twist)
 
-    # twist.data = 0 # 0 Degrees
-    # pub3_right.publish(twist)
-    # pub3_left.publish(twist)
+    twist.data = 0 # 0 Degrees
+    pub3_right.publish(twist)
+    pub3_left.publish(twist)
 
     twist.data = -1.0472 # -60 Degrees
     pub4_right.publish(twist)
