@@ -156,7 +156,7 @@ def plotcircle():
             x_dot = 2 * th[i] - 5
             z_dot = 0
 
-            V = Matrix([x_dot,0.0, z_dot, 0.0, 0.0, 0.0])
+            V = Matrix([x_dot,0.0, z_dot, 0.0, 0.0, 0.0, 0.0])
 
             J_inv = J.evalf(3, subs={theta1:theta_joint[0],theta2:theta_joint[1],theta3:theta_joint[2],theta4:theta_joint[3],theta5:theta_joint[4],theta6:theta_joint[5],theta7:theta_joint[6]}).inv()
 
