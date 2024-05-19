@@ -72,17 +72,20 @@ def turn_push(data):
     pub2_right.publish(data.data[1])
     pub2_left.publish(data.data[1])
 
-    pub4_right.publish(data.data[2])
-    pub4_left.publish(data.data[2])
+    pub3_right.publish(data.data[2])
+    pub3_left.publish(data.data[2])
 
-    pub5_right.publish(data.data[3])
-    pub5_left.publish(data.data[3])
+    pub4_right.publish(data.data[3])
+    pub4_left.publish(data.data[3])
 
-    pub6_right.publish(data.data[4])
-    pub6_left.publish(data.data[4])
+    pub5_right.publish(data.data[4])
+    pub5_left.publish(data.data[4])
 
-    pub7_right.publish(data.data[5])
-    pub7_left.publish(data.data[5])
+    pub6_right.publish(data.data[5])
+    pub6_left.publish(data.data[5])
+
+    pub7_right.publish(data.data[6])
+    pub7_left.publish(data.data[6])
     
     
 def listener():
